@@ -1,7 +1,5 @@
 package pages;
 
-import java.util.List;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -41,9 +39,7 @@ public class MyAddressesPage {
 
 	public WebElement getDeleteBtn() {
 		return driver.findElement(By.cssSelector("a[title='Delete']:last-child"));
-//		List<WebElement> deleteBtns =  driver.findElements(By.xpath("//a[@title=\"Delete\"]"));
-//		int size = deleteBtns.size();
-//		return deleteBtns.get(size-1);
+
 	}
 
 	public void clickDelete() {

@@ -14,7 +14,7 @@ public class LoginTests extends BaseTest {
 
 	}
 	
-	//@Test (priority = 0)
+	@Test (priority = 0)
 	public void logIn() throws InterruptedException {
 		String email = citacIzExcela.getStringData("TS Login", 9, 3);
 		String password = citacIzExcela.getStringData("TS Login", 10, 3);
@@ -33,7 +33,7 @@ public class LoginTests extends BaseTest {
 		Assert.assertEquals(actualText, expectedText);
 	}
 	
-	//@Test (priority = 5)
+	@Test (priority = 5)
 	public void logInWithInvalidEmail() throws InterruptedException {
 		String email = citacIzExcela.getStringData("TS Login", 18, 3);
 		String password = citacIzExcela.getStringData("TS Login", 19, 3);
@@ -52,7 +52,7 @@ public class LoginTests extends BaseTest {
 		Assert.assertEquals(actualText, expectedText);
 	}
 	
-//	@Test (priority = 10)
+	@Test (priority = 10)
 	public void logInWithInvalidPassword() throws InterruptedException {
 		String email = citacIzExcela.getStringData("TS Login", 27, 3);
 		int password = citacIzExcela.getIntData("TS Login", 28, 3);
@@ -93,7 +93,7 @@ public class LoginTests extends BaseTest {
 	}
 
 
-//	@Test (priority = 20)
+	@Test (priority = 20)
 	public void logOut() throws InterruptedException {
 		logIn();
 		Thread.sleep(1000);

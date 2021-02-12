@@ -17,7 +17,7 @@ public class MyAddressesTest extends BaseTest {
 		validLogIn(email, password);
 	}
 
-	// @Test (priority = 0)
+	 @Test (priority = 0)
 	public void updateAddress() throws InterruptedException {
 
 		String address = citacIzExcela.getStringData("TS My address", 11, 3);
@@ -39,7 +39,7 @@ public class MyAddressesTest extends BaseTest {
 
 	}
 
-	// @Test (priority = 5)
+	 @Test (priority = 5)
 	public void add2Address() throws InterruptedException {
 		String address = citacIzExcela.getStringData("TS My address", 22, 3);
 		String city = citacIzExcela.getStringData("TS My address", 23, 3);

@@ -34,7 +34,7 @@ public class WishlistTest extends BaseTest {
 
 	}
 
-//	@Test (priority = 5)
+	@Test (priority = 5)
 	public void add2Wishlist() throws InterruptedException {
 		String wlName2 = citacIzExcela.getStringData("TS My wish list", 17, 3);
 		String wlName3 = citacIzExcela.getStringData("TS My wish list", 21, 3);
@@ -56,7 +56,7 @@ public class WishlistTest extends BaseTest {
 		Assert.assertEquals(actualText2, expectedText2);
 	}
 
-//	@Test(priority = 10)
+	@Test(priority = 10)
 	public void removeWishlist() throws InterruptedException {
 		String expectedText = citacIzExcela.getStringData("TS My wish list", 32, 4);
 		String actualText;
