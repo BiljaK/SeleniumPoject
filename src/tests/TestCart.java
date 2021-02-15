@@ -17,7 +17,7 @@ public class TestCart extends BaseTest {
 		validLogIn(email, password);
 	}
 
-//	 @Test (priority = 0)
+	@Test(priority = 0)
 	public void add1ProductInCart() throws InterruptedException {
 
 		String expectedText = citacIzExcela.getStringData("TS Product cart", 9, 4);
@@ -35,7 +35,7 @@ public class TestCart extends BaseTest {
 		Assert.assertEquals(actualText, expectedText);
 	}
 
-//	@Test(priority = 5)
+	@Test(priority = 5)
 	public void add1ProductInCartQuantity3() throws InterruptedException {
 
 		int quantity = citacIzExcela.getIntData("TS Product cart", 19, 3);
@@ -54,7 +54,7 @@ public class TestCart extends BaseTest {
 		Assert.assertEquals(actualText, expectedText);
 	}
 
-//	@Test(priority = 10)
+	@Test(priority = 10)
 	public void add3ProductsInCart() throws InterruptedException {
 		String expectedText = citacIzExcela.getStringData("TS Product cart", 32, 4);
 		String actualText;
@@ -78,12 +78,12 @@ public class TestCart extends BaseTest {
 		actualText = shopingCartPage.getQuantityText().getText();
 		Assert.assertEquals(actualText, expectedText);
 	}
-	
+
 	@Test(priority = 15)
 	public void removeProductsFromCart() throws InterruptedException {
 		String expectedText = citacIzExcela.getStringData("TS Product cart", 42, 4);
 		String actualText;
-	
+
 		add3ProductsInCart();
 		Thread.sleep(3000);
 		shopingCartPage.deleteFromCartBtn();
@@ -91,12 +91,10 @@ public class TestCart extends BaseTest {
 		shopingCartPage.deleteFromCartBtn();
 		Thread.sleep(8000);
 		shopingCartPage.deleteFromCartBtn();
-	//	Thread.sleep(10000);
-		
+
 		actualText = shopingCartPage.getEmptyShopingCartText().getText();
 		Assert.assertEquals(actualText, expectedText);
 	}
-	
 
 	@AfterMethod
 	public void afterTest() throws InterruptedException {
