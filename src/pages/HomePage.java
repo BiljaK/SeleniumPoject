@@ -18,6 +18,6 @@ public class HomePage {
 
 	public void clickSignin() {
 		getSigninTab().click();
-	}
+	}	
 
 }

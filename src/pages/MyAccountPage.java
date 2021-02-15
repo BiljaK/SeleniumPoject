@@ -38,4 +38,10 @@ public class MyAccountPage {
 				.findElement(By.xpath("//*[@id=\"center_column\"]/div/div[1]/ul/li[4]/a/span"));
 		myPersonaInfoBtn.click();
 	}
+	
+	public void clickDressesTab() {
+		WebElement clickDress = driver.findElement(By.xpath("//*[@id=\"block_top_menu\"]/ul/li[2]/a"));
+		clickDress.click();
+	
+	}
 }

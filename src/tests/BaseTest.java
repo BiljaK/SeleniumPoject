@@ -7,7 +7,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import pages.ShopingCartPage;
 import pages.CitacIzExcela;
+import pages.DressesPage;
 import pages.HomePage;
 import pages.MyAccountPage;
 import pages.MyAddressesPage;
@@ -26,11 +28,16 @@ public class BaseTest {
 	YourAddressPage yourAddressPage;
 	MyPersonalInfoPage myPesonalInfoPage;
 	MyWishlistPage myWishlistPage;
+	DressesPage dressesPage;
+	ShopingCartPage shopingCartPage;
 
-	public void validLogIn(String email, String password) {
+	public void validLogIn(String email, String password) throws InterruptedException {
+		Thread.sleep(1000);
 		homePage.clickSignin();
+		Thread.sleep(1000);
 		signinPage.navigateToEmailInput(citacIzExcela.getStringData("TS Login", 9, 3));
 		signinPage.navigateToPasswordInput(citacIzExcela.getStringData("TS Login", 10, 3));
+		Thread.sleep(1000);
 		signinPage.navigateToSiginBtn();
 	}
 
@@ -47,6 +54,8 @@ public class BaseTest {
 		yourAddressPage = new YourAddressPage(driver);
 		myPesonalInfoPage = new MyPersonalInfoPage(driver);
 		myWishlistPage = new MyWishlistPage(driver);
+		dressesPage = new DressesPage(driver);
+		shopingCartPage = new ShopingCartPage(driver);
 		driver.manage().window().maximize();
 	}
 
